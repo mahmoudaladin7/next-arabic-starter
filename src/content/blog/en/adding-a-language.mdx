@@ -1,0 +1,47 @@
+export const metadata = {
+  title: "Adding a third language",
+  description: "The starter ships with Arabic and English. Here's how to add French, Urdu or any other language in four steps.",
+  date: "2026-10-02",
+};
+
+Routing, the language switcher, hreflang links and the sitemap all read from one list of locales. Adding a language means adding it to that list and translating your content.
+
+## 1. Register the locale
+
+Open `src/i18n/routing.ts`, add the locale code to `locales`, then add a row to `localeMeta`:
+
+```ts
+export const routing = defineRouting({
+  locales: ["ar", "en", "ur"],
+  defaultLocale: "ar",
+  localePrefix: "always",
+});
+
+export const localeMeta = {
+  ar: { dir: "rtl", nativeName: "العربية", ogLocale: "ar_SA" },
+  en: { dir: "ltr", nativeName: "English", ogLocale: "en_US" },
+  ur: { dir: "rtl", nativeName: "اردو", ogLocale: "ur_PK" },
+};
+```
+
+`dir` is the only part that changes layout. Set it to `"rtl"` for Arabic, Urdu, Persian and Hebrew.
+
+## 2. Translate the messages
+
+Copy `messages/en.json` to `messages/ur.json` and translate the values. Keep the keys as they are. Then run:
+
+```bash
+npm run check:i18n
+```
+
+It lists any key that's missing or extra in the new file.
+
+## 3. Add blog posts
+
+Create `src/content/blog/ur/` and add posts with the same file names as the other languages, so the switcher can link translations together.
+
+## 4. Check the fonts
+
+If the new language uses a script your fonts don't cover, add a font for it in `src/lib/fonts.ts`. Urdu, for example, usually reads better in a Nastaliq font. Languages written in Latin or Arabic script already work with the fonts included.
+
+That's it. The new language shows up in the switcher, the sitemap and the hreflang links without any other changes.

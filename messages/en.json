@@ -1,0 +1,140 @@
+{
+  "Metadata": {
+    "title": "next-arabic-starter: a Next.js starter for Arabic and English sites",
+    "description": "Start your Arabic and English Next.js site with RTL layout, Arabic fonts, number and date formatting, SEO and an MDX blog already set up.",
+    "ogTitle": "The Next.js starter for Arabic and English websites"
+  },
+  "Header": {
+    "navLabel": "Main",
+    "blog": "Blog",
+    "github": "Source code on GitHub",
+    "toggleTheme": "Switch between light and dark mode",
+    "skipToContent": "Skip to content"
+  },
+  "Footer": {
+    "builtBy": "Built by <author>{name}</author>",
+    "license": "Free to use under the <link>MIT license</link>"
+  },
+  "Home": {
+    "intro": "A Next.js starter for websites in Arabic and English. Right-to-left layout, Arabic fonts, number and date formatting, SEO and a blog are set up, so you can go straight to building your pages.",
+    "useTemplate": "Use this template",
+    "viewOnGithub": "View on GitHub",
+    "copyCommand": "Copy command",
+    "copied": "Copied",
+    "mirror": {
+      "title": "Write it once. It flips by itself.",
+      "body": "Below is the same component rendered twice, with no <code>if (rtl)</code> anywhere in it. It uses logical classes like <code>ms-auto</code> and <code>text-start</code>, plus <code>rtl:-scale-x-100</code> on the arrows, so the browser mirrors it based on the page's <code>dir</code>. Arrows flip. Text, logos and numbers don't.",
+      "ltr": "Left to right",
+      "rtl": "Right to left"
+    },
+    "format": {
+      "title": "Numbers, dates and plurals, done properly",
+      "body": "Arabic has six plural forms. Pick a number and watch the sentence change. All of it comes from next-intl and the browser's built-in Intl APIs, so there's nothing to write by hand."
+    },
+    "features": {
+      "title": "What's set up for you",
+      "routing": {
+        "title": "Locale routing",
+        "body": "Every URL starts with its language, <code>/ar</code> or <code>/en</code>. First-time visitors go to their browser's language."
+      },
+      "rtl": {
+        "title": "Right-to-left layout",
+        "body": "<code>lang</code> and <code>dir</code> are set on the html tag and every component uses logical classes, so Arabic pages mirror correctly."
+      },
+      "fonts": {
+        "title": "Arabic typography",
+        "body": "IBM Plex Sans Arabic for text and Reem Kufi for headlines. Both are self-hosted, so nothing is fetched from Google."
+      },
+      "formatting": {
+        "title": "Formatting",
+        "body": "Plurals, numbers, currency, and Gregorian and Hijri dates, using next-intl and the built-in Intl APIs."
+      },
+      "switcher": {
+        "title": "Language switcher",
+        "body": "Takes you to the same page in the other language, not back to the home page."
+      },
+      "darkMode": {
+        "title": "Dark mode",
+        "body": "Follows the system setting and remembers your choice, with no flash on load."
+      },
+      "seo": {
+        "title": "SEO",
+        "body": "A title and description per language, canonical and hreflang links, a sitemap with both languages, and robots.txt."
+      },
+      "og": {
+        "title": "Share images",
+        "body": "Open Graph images are generated for every page, and Arabic titles render correctly. The default image renderer gets them wrong."
+      },
+      "blog": {
+        "title": "MDX blog",
+        "body": "Write posts in Markdown with React components, one folder per language. No CMS needed."
+      },
+      "types": {
+        "title": "Checked translations",
+        "body": "A missing or misspelled key fails the type check, and <code>npm run check:i18n</code> compares both languages."
+      },
+      "agents": {
+        "title": "AGENTS.md",
+        "body": "Tells AI coding assistants the RTL rules, so the code they write flips correctly too."
+      }
+    },
+    "blog": {
+      "title": "From the blog",
+      "all": "All posts"
+    },
+    "start": {
+      "title": "Start a project",
+      "create": {
+        "title": "Create the project",
+        "body": "Run this in your terminal. It copies the starter into a new folder."
+      },
+      "customize": {
+        "title": "Make it yours",
+        "body": "Set your site name, URL and links in <code>src/config/site.ts</code>."
+      },
+      "content": {
+        "title": "Add your content",
+        "body": "Translations live in <code>messages/ar.json</code> and <code>messages/en.json</code>. Blog posts go in <code>src/content/blog</code>."
+      },
+      "deploy": {
+        "title": "Deploy",
+        "body": "Push to GitHub, import the repo on Vercel, and set <code>NEXT_PUBLIC_SITE_URL</code> to your domain."
+      }
+    }
+  },
+  "Mirror": {
+    "home": "Home",
+    "orders": "Orders",
+    "order": "Order 2048",
+    "name": "Sara Al-Harbi",
+    "message": "Your order is on its way and should arrive before 4 PM.",
+    "badge": "New",
+    "progress": "Delivery progress",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "Format": {
+    "count": "Count",
+    "decrease": "Decrease",
+    "increase": "Increase",
+    "posts": "{count, plural, =0 {No posts yet} one {# post} other {# posts}}",
+    "sentence": "Sentence",
+    "pluralForm": "Plural form",
+    "price": "Price",
+    "date": "Gregorian date",
+    "hijri": "Hijri date",
+    "relative": "Relative time",
+    "digits": "Arabic-Indic digits"
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Notes on building Arabic and English websites with Next.js.",
+    "empty": "No posts yet.",
+    "allPosts": "All posts"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "body": "The link may be broken, or the page may have moved.",
+    "home": "Go to the home page"
+  }
+}

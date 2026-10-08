@@ -1,0 +1,52 @@
+export const metadata = {
+  title: "An RTL checklist for Next.js sites",
+  description: "Seven things to get right when your site has to read from right to left as well as left to right.",
+  date: "2026-10-06",
+};
+
+Most RTL bugs come from the same handful of mistakes. Here's the list this starter is built around. Use it when you review your own pages.
+
+## 1. Set `lang` and `dir` on the html tag
+
+Everything else depends on this. With `<html lang="ar" dir="rtl">`, the browser lays out text, flexbox, grid and tables from the right. This starter sets both in `src/app/[locale]/layout.tsx` from the locale in the URL.
+
+## 2. Use logical classes, not left and right
+
+Physical directions are the most common bug. Tailwind has a logical version of each one:
+
+| Instead of | Use | Means |
+| --- | --- | --- |
+| `ml-4` / `mr-4` | `ms-4` / `me-4` | margin at the start / end |
+| `pl-4` / `pr-4` | `ps-4` / `pe-4` | padding at the start / end |
+| `left-0` / `right-0` | `start-0` / `end-0` | position |
+| `text-left` | `text-start` | alignment |
+| `rounded-l-lg` | `rounded-s-lg` | corners |
+| `border-l` | `border-s` | borders |
+
+Write the component once and it works in both directions.
+
+## 3. Flip what points, not what is
+
+Mirror icons that show direction or movement: back and forward arrows, chevrons in breadcrumbs, "send" icons. Use `rtl:-scale-x-100` for these.
+
+Don't mirror things that look the same everywhere: logos, checkmarks, play buttons, clocks, charts with a time axis, and screenshots.
+
+## 4. Isolate text in the other direction
+
+A phone number, an email address or a line of code inside Arabic text can come out scrambled. Wrap it:
+
+- `<span dir="ltr">` for things that are always left to right, like phone numbers and code.
+- `<bdi>` for content you don't control, like user names.
+- `dir="auto"` on inputs and textareas, so the field follows what the person types.
+
+## 5. Respect Arabic typography
+
+Never add `letter-spacing` to Arabic: it breaks the joins between letters. Give Arabic text more line height than Latin text (around 1.8 for body copy) so dots and diacritics have room.
+
+## 6. Format numbers and dates with Intl
+
+Don't build dates or prices by hand. `next-intl` uses the browser's `Intl` APIs, which know Arabic plural forms, the Hijri calendar, currency symbols and both digit styles. Decide once whether you want `123` or `١٢٣` and use it everywhere.
+
+## 7. Test with real Arabic
+
+Lorem ipsum hides problems. Arabic words have different lengths, buttons wrap differently and long words don't break the same way. Fill your pages with real copy before you sign off on a design.
