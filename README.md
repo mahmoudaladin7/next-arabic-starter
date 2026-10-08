@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://next-arabic-starter.vercel.app"><strong>Live demo</strong></a>
+  <strong>Live demo:</strong> <a href="https://next-arabic-starter.vercel.app/">next-arabic-starter.vercel.app</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="README.ar.md">اقرأ بالعربية</a>
 </p>

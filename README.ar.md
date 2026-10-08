@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://next-arabic-starter.vercel.app/ar"><strong>النسخة الحية</strong></a>
+  <strong>النسخة الحية:</strong> <a href="https://next-arabic-starter.vercel.app/ar"><span dir="ltr">next-arabic-starter.vercel.app/ar</span></a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="README.md">Read in English</a>
 </p>
